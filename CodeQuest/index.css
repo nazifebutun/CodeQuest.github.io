@@ -1,12 +1,16 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #c2bf97;
 }
 nav {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: beige;
+    position: fixed;
     background-color: #90613b;
     overflow: hidden;
+    width: 100%;
+    z-index: 1;
 }
 nav ul {
     list-style-type: none;
@@ -26,3 +30,145 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #ce935a;
 }
+
+.container {
+    position: absolute; 
+    margin: 0 auto;
+    width: 850px;
+    place-items: center;
+    padding: 0px;
+    width: 100vw; /* Genişliği ekran genişliği kadar olacak */
+    height: 100vh; /* Yüksekliği ekran yüksekliği kadar olacak */
+    overflow: hidden; /* Fazla içeriği gizleyecek */
+    display: flex; /* İçerikleri düzenlemek için flex kullanacağız */
+    justify-content: center; /* İçerikleri yatayda ortalar */
+    align-items: center; /* İçerikleri dikeyde ortalar */
+}
+footer{
+    position: fixed;
+    color: white;
+    background-color: #90613b;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    z-index: 1;
+}
+
+.image img{
+    position: absolute;
+    height: 100px;
+    width: 290px;
+    top: 530px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.image a{
+    position: absolute;
+    top: 520px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0);
+}
+.image2 img{
+    position: absolute;
+    height: 250px;
+    width: 180px;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.image3 img{
+    z-index: -1;
+    max-width: 100%; /* Resmin maksimum genişliği container'a göre ayarlanır */
+    max-height: 100%; /* Resmin maksimum yüksekliği container'a göre ayarlanır */
+    object-fit: contain;
+    
+}
+.overlay {
+    position: absolute; /* Resmin üzerine koyabilmek için */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)); /* İstenilen gradient */
+    z-index: 0;
+  }
+.text {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 75px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 2px 4px  #5f330f;
+
+  }
+  .con{
+    position: absolute; 
+    margin: 0 auto;
+    width: 850px;
+    padding: 0px;
+    width: 100vw; /* Genişliği ekran genişliği kadar olacak */
+    height: 100vh; /* Yüksekliği ekran yüksekliği kadar olacak */
+    display: flex; /* İçerikleri düzenlemek için flex kullanacağız */
+    justify-content: center; /* İçerikleri yatayda ortalar */
+    align-items: center; /* İçerikleri dikeyde ortalar */
+    top: -450px;
+    right: 380px;
+
+  }
+  .image4{
+    position: relative; /* .image4 konteynerine göre pozisyonlanacak */
+    top: -50px;
+    justify-content: center; /* İçerikleri yatayda ortalar */
+    align-items: center; /* İçerikleri dikeyde ortalar */
+    object-fit: contain;
+    
+  }
+  .image4 img{
+    position: absolute;
+    top: 50px;
+    z-index: 1;
+    width: 700px;
+}
+
+.text-1 {
+    position: absolute;
+    text-align: justify;
+    top: 230px;
+    z-index: 1;
+    display: block;
+    width: 450px;
+    left: 110px;
+    font-size: 13px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 2px 4px  #5f330f;
+  }
+ 
+  .image5 img{
+    position: absolute;
+    top: 98%;
+    z-index: 1;
+    width: 500px;
+    height: 110px;
+    left: 56%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+.text-2 {
+    position: absolute;
+    text-align: justify;
+    top: 112%;
+    z-index: 1;
+    display: block;
+    width: 650px;
+    left: 53%;
+    font-size: 13px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 2px 2px 4px  #5f330f;
+  }
