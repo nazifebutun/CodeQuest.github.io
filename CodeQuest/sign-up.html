@@ -1,0 +1,72 @@
+<!-- sign-up.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <!-- Link to the main CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link to Boxicons CSS file -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+
+    <nav>
+        <!-- Navigation menu -->
+        <ul>
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="about-us.html">About Us</a></li> <!-- Link to About Us page -->
+            <li><a href="login.html">Login</a></li> <!-- Link to Login page -->
+            <li><a href="sign-up.html">Sign Up</a></li> <!-- Link to Sign Up page -->
+        </ul>
+    </nav>
+       
+    <div class="wrapper">
+        <!-- Sign up form -->
+        <form action="">
+            <h1>Sign Up</h1>
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+                <!-- Icon for username input -->
+                <i class='bx bx-user'></i> 
+            </div>
+
+            <div class="input-box">
+                <input type="email" placeholder="Email" required>
+                <!-- Icon for email input -->
+                <i class='bx bx-envelope'></i>
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Password" required>
+                <!-- Icon for password input -->
+                <i class='bx bx-lock-alt'></i>
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Confirm Password" required>
+                <!-- Icon for confirm password input -->
+                <i class='bx bx-lock-alt'></i>
+            </div>
+
+            <!-- Sign up button -->
+            <button type="submit" class="btn">Sign Up</button>
+            <div class="register-link">
+                <!-- Link to login page -->
+                <p>Already have an account? <a href="#">Login</a></p>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <!-- Footer section -->
+        <p>
+            All rights reserved.
+        </p>
+    </footer>
+
+</body>
+</html>
