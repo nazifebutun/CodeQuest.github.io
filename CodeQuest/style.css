@@ -1,0 +1,243 @@
+/* style.css */
+
+/* Global styles */
+* {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation styles */
+nav {
+    background-color: transparent; 
+    padding: 10px 40px; 
+    width: 100%; 
+    text-align: right; 
+    position: fixed;
+    top:0
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px; 
+}
+
+nav ul li:first-child {
+    margin-left: 0; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    text-align: center;
+    color: #fff; 
+    padding: 14px 16px;
+    font-size: 16px; 
+}
+nav ul li a:hover {
+    background-color: #ce935a;
+}
+
+/* Body styles */
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(resources/background.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Wrapper styles */
+.wrapper{
+    width: 420px;
+    background: transparent;
+    color: #fff ;
+    border-radius: 10px;
+    padding: 30px 40px;
+}
+
+.wrapper h1{
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px; 
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+    color: #fff;
+}
+
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+} 
+
+.wrapper .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5 px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input{
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+.remember-forgot a{
+    color: #fff;
+    text-decoration: none ;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+}
+
+.wrapper .btn{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+}
+
+.wrapper .register-link{
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover{
+    text-decoration: underline;
+}
+
+footer {
+    width: 100%;
+    background: transparent;
+    color: rgb(99, 96, 96);
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+}
+
+/* About us section */
+.container{
+    text-align: center;
+    background: transparent;
+}
+
+.header{
+    padding-top:30px ;
+    color: rgb(52, 51, 51);
+    font-size: 20px;
+    margin: auto;
+    line-height: 50px;
+}
+
+.sb-container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.teams{
+    margin: 10px;
+    padding: 22px;
+    max-width: 30%;
+    cursor: pointer;
+    transition: 0.4s;
+    box-sizing: border-box;
+}
+
+.teams img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.4s; /* Transition effect */
+}
+
+.teams img:hover {
+    transform: scale(1.1); /* Enlarge image on hover */
+}
+
+.teams:hover{
+    background: rgb(142, 118, 83);
+    border-radius: 12px;
+}
+
+.name{
+    padding: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.desig{
+    font-style: italic;
+    color: rgb(66, 65, 65);
+}
+
+.about{
+    margin: 20px 0;
+    font-weight: lighter;
+    color: rgb(52, 51, 51);
+}
+ 
+.social-links{
+    margin: 14px;
+}
+
+.social-links a:hover{
+    transform: scale(1.5) 
+}
+
+.social-links a{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    transition: .4s;
+}
+
+.social-links a i{
+    color: #444;
+}
