@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Feedback</title>
+    <link rel="stylesheet" href="contact-us.css"> 
+    <script type="text/javascript" src="jquery-ui-1.13.3.custom/external/jquery/jquery.js"> </script>
+    <script type="text/javascript" src="jquery-ui-1.13.3.custom/jquery-ui.js"> </script>
+    <script type="text/javascript" src="form.js"></script>
+</head>
+<body>
+    <nav>
+        <!-- Navigation menu -->
+        <ul>
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="about-us.html">About Us</a></li> <!-- Link to About Us page -->
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="reservation.html">Reservation</a></li> 
+            <li><a href="feedback.html">Product Feedback</a></li> <!-- Link to Feedback page -->
+            <li><a href="login.html">Login</a></li> <!-- Link to Login page -->
+            <li><a href="sign-up.html">Sign Up</a></li> <!-- Link to Sign Up page -->
+        </ul>
+    </nav>
+
+    <div class="form">
+        <p>Product Feedback</p>
+        <br><br>
+
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="name">Name: </label>
+                <input type="text" id="name" name="name" required placeholder="Your name">
+                <div id="message1"></div>
+            </div>
+            <div class="form-group">
+                <label for="surname">Surname: </label>
+                <input type="text" id="surname" name="surname" required placeholder="Your surname">
+                <div id="message2"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" required placeholder="Email">
+                <div id="message3"></div>
+            </div>
+            <div class="form-group">
+                <label for="product">Product: </label>
+                <input type="text" id="product" name="product" required placeholder="Product name">
+                <div id="message6"></div>
+            </div>
+            <div class="form-group">
+                <label for="comment">Your Comment: </label>
+                <textarea id="comment" name="comment" rows="5" required placeholder="Leave your comment"></textarea>
+                <div id="message7"></div>
+            </div>
+            <div id="slider-container">
+                <label for="slider">Satisfaction Survey Bar</label>
+                <input type="range" min="0" max="100" value="50" id="slider">
+                <span id="slider-value">50</span>
+            </div>
+            <button id="submit">Submit</button>
+        </form>
+    </div>
+
+
+</body>
+</html>
