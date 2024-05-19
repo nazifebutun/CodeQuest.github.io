@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
     $('#submit').click(function(e) {
+        e.preventDefault(); // Form submission'ını önle
 
         var name = $('#name').val();
         var surname = $('#surname').val(); // contact-us.html 

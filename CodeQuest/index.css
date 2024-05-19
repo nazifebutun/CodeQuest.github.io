@@ -5,7 +5,7 @@ body {
 }
 nav {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: transparent; 
+    color: beige;
     position: fixed;
     overflow: hidden;
     width: 100%;
@@ -32,7 +32,6 @@ nav ul li a:hover {
     background-color: #ce935a;
 }
 
-
 .container {
     position: absolute; 
     margin: 0 auto;
@@ -42,11 +41,11 @@ nav ul li a:hover {
     width: 100vw; /* Its width will be the same as the screen width */
     height: 100vh; /* Its height will be as much as the screen height */
     overflow: hidden; /* Will hide excess content */
-    display:flex; /* We will use flex to edit the content */
+    display: flex; /* We will use flex to edit the content */
     justify-content: center; /* Centers the content horizontally */
     align-items: center; /* Centers content vertically */
 }
-footer{
+footer {
     position: fixed;
     color: rgb(99, 96, 96);
     width: 100%;
@@ -55,7 +54,7 @@ footer{
     z-index: 1;
 }
 
-.image img{
+.image img {
     position: absolute;
     height: 100px;
     width: 290px;
@@ -64,13 +63,13 @@ footer{
     transform: translate(-50%, -50%);
     z-index: 1;
 }
-.image  a:hover {
+.image a:hover {
     width: 320px;
     height: 100px;
     z-index: 1;
-    background-color:rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
 }
-.image a{
+.image a {
     position: absolute;
     top: 520px;
     left: 50%;
@@ -81,7 +80,7 @@ footer{
     color: rgba(255, 255, 255, 0);
 }
 
-.image2 img{
+.image2 img {
     position: absolute;
     height: 250px;
     width: 180px;
@@ -89,12 +88,11 @@ footer{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.image3 img{
+.image3 img {
     z-index: -1;
     max-width: 100%; /* The maximum width of the image is set according to the container */
     max-height: 100%; /* The maximum height of the image is set according to the container */
     object-fit: contain;
-    
 }
 .overlay {
     position: absolute; /* To put it on the image */
@@ -102,9 +100,9 @@ footer{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));/* Desired gradient */
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)); /* Desired gradient */
     z-index: 0;
-  }
+}
 .text {
     position: absolute;
     top: 400px;
@@ -112,32 +110,29 @@ footer{
     transform: translate(-50%, -50%);
     font-size: 75px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 2px 2px 4px  #5f330f;
-
-  }
-  .con{
+    text-shadow: 2px 2px 4px #5f330f;
+}
+.con {
     position: absolute; 
     margin: 0 auto;
     width: 850px;
     padding: 0px;
     width: 100vw; /* Its width will be the same as the screen width */
     height: 100vh; /* Its height will be as much as the screen height */
-    display:flex; /* We will use flex to edit the content */
+    display: flex; /* We will use flex to edit the content */
     justify-content: center; /* Centers the content horizontally */
     align-items: center; /* Centers content vertically */
     top: -450px;
     right: 380px;
-
-  }
-  .image4{
+}
+.image4 {
     position: relative; /* Will be positioned according to the .image4 container */
     top: -50px;
     justify-content: center; /* Centers the content horizontally */
     align-items: center; /* Centers content vertically */
     object-fit: contain;
-    
-  }
-  .image4 img{
+}
+.image4 img {
     position: absolute;
     top: 80px;
     z-index: 1;
@@ -154,10 +149,9 @@ footer{
     left: 110px;
     font-size: 13px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 2px 2px 4px  #5f330f;
-  }
- 
-  .image5 img{
+    text-shadow: 2px 2px 4px #5f330f;
+}
+.image5 img {
     position: absolute;
     top: 102%;
     z-index: 1;
@@ -177,5 +171,12 @@ footer{
     left: 53%;
     font-size: 13px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-shadow: 2px 2px 4px  #5f330f;
-  }
+    text-shadow: 2px 2px 4px #5f330f;
+}
+.text-container {
+    background-color: #e0d4ba; /* Background color for the text container */
+    padding: 15px; /* Padding for better readability */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for a subtle effect */
+    border: 2px solid red; /* Red border around the text container */
+}

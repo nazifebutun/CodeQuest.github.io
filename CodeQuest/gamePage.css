@@ -1,0 +1,213 @@
+nav {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: beige;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    z-index: 1;
+    top: 0; 
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    float: right;
+    margin-left: 40px; 
+}
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+}
+nav ul li a:hover {
+    background-color: #ce935a;
+}
+footer {
+    position: fixed;
+    color: rgb(99, 96, 96);
+    width: 100%;
+    bottom: 0px;
+    text-align: center;
+    z-index: 1;
+    padding: 10px 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background:url(images/map_backgroung.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2); /* White translucent layer */
+    z-index: -1; /* Ensures it stays in the background */
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.buttons {
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.question-button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.popup {
+    display: none; /* Initially hidden */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+div[class^="png"] {
+    position: absolute; /* Position all divs as absolute */
+}
+
+/* Positioning for each image */
+.png2 {
+    top: 650px;
+    left: 800px;
+    width: 200px; /* Size adjustments */
+}
+
+.png3 {
+    top: 130px;
+    left: 1600px;
+    width: 200px; /* Size adjustments */
+}
+
+.png5 {
+    top: 300px;
+    left: 0px;
+    width: 600px; /* Size adjustments */
+}
+
+.png6 {
+    top: 750px;
+    left: 170px;
+    width: 100px; /* Size adjustments */
+}
+
+.png7 {
+    top: 680px;
+    left: 250px;
+    width: 200px; /* Size adjustments */
+}
+
+.png8 {
+    top: 1050px;
+    left: 230px;
+    width: 100px; /* Size adjustments */
+}
+
+.png9 {
+    top: 1200px;
+    left: 260px;
+    width: 100px; /* Size adjustments */
+}
+
+.png10 {
+    top: 650px;
+    left: 1350px;
+    width: 250px; /* Size adjustments */
+}
+
+.png11 {
+    top: 20px;
+    left: 150px;
+    width: 250px; /* Size adjustments */
+}
+
+.png12 {
+    top: 50px;
+    left: 1270px;
+    width: 100px; /* Size adjustments */
+}
+
+.png13 {
+    top: 600px;
+    left: 800px;
+    width: 100px; /* Size adjustments */
+}
+
+.png14 {
+    top: 1050px;
+    left: 230px;
+    width: 100px; /* Size adjustments */
+}
+
+.png15 {
+    top: 420px;
+    left: 1520px;
+    width: 150px; /* Size adjustments */
+}
+
+.png16 {
+    top: 50px;
+    left: 1200px;
+    width: 300px; /* Size adjustments */
+}
+
+.png17 {
+    top: 40px;
+    left: 750px;
+    width: 450px; /* Size adjustments */
+}
+
+/* Size adjustments for images */
+div[class^="png"] img {
+    width: 100%; /* Scale images to fit the container width */
+    height: auto; /* Maintain aspect ratio */
+}
