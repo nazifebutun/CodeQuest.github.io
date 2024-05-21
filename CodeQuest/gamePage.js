@@ -26,6 +26,16 @@ function loadQuestions() {
     xhr.send();
 }
 
+// Initialize buttons: disable all except the first one
+function initializeButtons() {
+    questionButtons.forEach((button, index) => {
+        if (index !== 0) {
+            button.disabled = true;
+            button.style.filter = 'grayscale(100%)';  
+        }
+    });
+}
+
 // Add click event to each button
 questionButtons.forEach(button => {
     button.addEventListener('click', function() {
@@ -69,7 +79,16 @@ function checkAnswer() {
     const userAnswer = answerInput.value.trim();
     if (userAnswer === questions[currentQuestionIndex].answer) {
         alert('Correct answer!');
+        questionButtons[currentQuestionIndex].classList.add('shining');  // Add shining effect
+        questionButtons[currentQuestionIndex].disabled = true;  // Disable the current button
+        questionButtons[currentQuestionIndex].style.filter = 'none';  // Remove grayscale
         popup.style.display = 'none';
+
+        // Unlock the next button if there is one
+        if (currentQuestionIndex + 1 < questionButtons.length) {
+            questionButtons[currentQuestionIndex + 1].disabled = false;
+            questionButtons[currentQuestionIndex + 1].style.filter = 'none';  // Remove grayscale from the next button
+        }
     } else {
         alert('Wrong answer! Try again.');
     }
