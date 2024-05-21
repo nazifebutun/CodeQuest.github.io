@@ -16,6 +16,7 @@ function loadQuestions() {
         if (this.status === 200) {
             questions = JSON.parse(this.responseText);
             console.log('Questions loaded:', questions);  // Check if questions are loaded
+            initializeButtons();  // Initialize buttons after questions are loaded
         } else {
             console.error('Failed to load questions');
         }
@@ -39,10 +40,12 @@ function initializeButtons() {
 // Add click event to each button
 questionButtons.forEach(button => {
     button.addEventListener('click', function() {
-        currentQuestionIndex = parseInt(this.getAttribute('data-index'));  // Convert string to integer
-        console.log('Current question index:', currentQuestionIndex);  // Check current question index
-        showQuestion();
-        popup.style.display = 'block';
+        if (!this.disabled) {
+            currentQuestionIndex = parseInt(this.getAttribute('data-index'));  // Convert string to integer
+            console.log('Current question index:', currentQuestionIndex);  // Check current question index
+            showQuestion();
+            popup.style.display = 'block';
+        }
     });
 });
 
