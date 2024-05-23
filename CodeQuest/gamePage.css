@@ -116,54 +116,54 @@ div[class^="png"] {
 }
 
 /* Positioning for each image */
-.png2 {
+.png1 {
     top: 580px;
     left: 800px;
     width: 200px; /* Size adjustments */
 }
 
-.png3 {
+.png2 {
     top: 420px;
     left: 1180px;
     width: 200px; /* Size adjustments */
 }
 
-.png5 {
+.png3 {
     top: 300px;
     left: 0px;
     width: 600px; /* Size adjustments */
 }
 
-.png10 {
+.png4 {
     top: 440px;
     left: 560px;
     width: 200px;
 }
 
-.png11 {
+.png5 {
     top: 20px;
     left: 150px;
     width: 250px; /* Size adjustments */
 }
 
-.png12 {
+.png6 {
     top: 50px;
     left: 1270px;
     width: 100px; /* Size adjustments */
 }
-.png15 {
+.png7 {
     top: 240px;
     left: 540px;
     width: 130px; /* Size adjustments */
 }
 
-.png16 {
+.png8 {
     top: 50px;
     left: 1200px;
     width: 300px; /* Size adjustments */
 }
 
-.png17 {
+.png9 {
     top: 40px;
     left: 750px;
     width: 450px; /* Size adjustments */
