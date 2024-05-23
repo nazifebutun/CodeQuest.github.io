@@ -1,12 +1,12 @@
 [
-    {"question": "How do you declare a variable in Java?", "answer": "int number;"},
-    {"question": "How do you declare an array in Java?", "answer": "int[] numbers;"},
-    {"question": "How do you write a loop in Java?", "answer": "for (int i = 0; i < 10; i++) {}"},
-    {"question": "How do you write an if-else statement in Java?", "answer": "if (condition) {} else {}"},
-    {"question": "How do you define a method in Java?", "answer": "void myMethod() {}"},
-    {"question": "How do you define a class in Java?", "answer": "class MyClass {}"},
-    {"question": "How do you create an object in Java?", "answer": "MyClass obj = new MyClass();"},
-    {"question": "How do you find the length of an array in Java?", "answer": "numbers.length;"},
-    {"question": "How do you compare strings in Java?", "answer": "string1.equals(string2);"},
-    {"question": "How do you write a comment in Java?", "answer": "// This is a comment"}
+    {"question": "How do you declare a variable in Java?", "answer": "i"},
+    {"question": "How do you declare an array in Java?", "answer": "i"},
+    {"question": "How do you write a loop in Java?", "answer": "i"},
+    {"question": "How do you write an if-else statement in Java?", "answer": "i"},
+    {"question": "How do you define a method in Java?", "answer": "i"},
+    {"question": "How do you define a class in Java?", "answer": "i"},
+    {"question": "How do you create an object in Java?", "answer": "i"},
+    {"question": "How do you find the length of an array in Java?", "answer": "i"},
+    {"question": "How do you compare strings in Java?", "answer": "i"},
+    {"question": "How do you write a comment in Java?", "answer": "i"}
 ]

@@ -3,6 +3,7 @@ let currentQuestionIndex = 0;
 
 const questionButtons = document.querySelectorAll('.question-button');
 const popup = document.getElementById('popup');
+const congratsPopup = document.getElementById('congratsPopup');
 const popupBody = document.getElementById('popupBody');
 const answerInput = document.getElementById('answer');
 const submitAnswerButton = document.getElementById('submitAnswer');
@@ -32,7 +33,7 @@ function initializeButtons() {
     questionButtons.forEach((button, index) => {
         if (index !== 0) {
             button.disabled = true;
-            button.style.filter = 'grayscale(100%)';  
+            button.style.filter = 'grayscale(100%)';
         }
     });
 }
@@ -77,11 +78,27 @@ function showQuestion() {
     }
 }
 
-// Check the answer
 function checkAnswer() {
     const userAnswer = answerInput.value.trim();
     if (userAnswer === questions[currentQuestionIndex].answer) {
-        alert('Correct answer!');
+        const currentQuestionNumber = currentQuestionIndex + 1;
+        const nextQuestionNumber = currentQuestionNumber + 1;
+        const totalQuestions = questions.length;
+        let message = "";
+
+        if (nextQuestionNumber <= totalQuestions) {
+            message = `Congratulations! You completed question ${currentQuestionNumber} and unlocked question ${nextQuestionNumber}. You are one step closer to the grand prize!`;
+        } else {
+            message = "Congratulations! You've completed all questions. Stay tuned for the next levels!";
+            createConfetti();
+        }
+
+        document.getElementById('congratsMessage').textContent = message;
+        congratsPopup.style.display = 'block'; // Display congrats popup
+        setTimeout(() => { // After 3 seconds, hide the congrats popup
+            congratsPopup.style.display = 'none';
+        }, 3000);
+
         questionButtons[currentQuestionIndex].classList.add('shining');  // Add shining effect
         questionButtons[currentQuestionIndex].disabled = true;  // Disable the current button
         questionButtons[currentQuestionIndex].style.filter = 'none';  // Remove grayscale
@@ -93,11 +110,40 @@ function checkAnswer() {
             questionButtons[currentQuestionIndex + 1].style.filter = 'none';  // Remove grayscale from the next button
         }
     } else {
-        alert('Wrong answer! Try again.');
+        // Yanlış cevap
+        const wrongMessage = document.getElementById('wrongMessage');
+        wrongMessage.textContent = 'Wrong answer! Try again.';
+        wrongPopup.style.display = 'block';
+
+        // 2 saniye sonra popup'ı gizle
+        setTimeout(() => {
+            wrongPopup.style.display = 'none';
+        }, 2000);
     }
 }
 
-// Load questions when the page is loaded
+function createConfetti() {
+    const confettiContainer = document.getElementById('confettiContainer');
+    const colors = ['#f00', '#0f0', '#00f', '#ff0', '#f0f', '#0ff'];
+    const numConfetti = 200;
+
+    for (let i = 0; i < numConfetti; i++) {
+        const confetti = document.createElement('div');
+        confetti.style.width = '10px';
+        confetti.style.height = '10px';
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.position = 'absolute';
+        confetti.style.left = `${Math.random() * 100}%`;
+        confetti.style.animation = 'falling 4s linear infinite';
+        confetti.style.animationDelay = `${Math.random() * 4}s`; // Konfeti parçacıklarının rastgele zamanlarda başlamasını sağlar
+
+        confettiContainer.appendChild(confetti);
+    }
+
+    document.getElementById('congratsImage').src = 'images/cup.png';
+}
+
+
 window.onload = function() {
     loadQuestions();
 };
