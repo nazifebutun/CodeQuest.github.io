@@ -67,16 +67,45 @@ submitAnswerButton.addEventListener('click', function() {
     checkAnswer();
 });
 
-// Show the question
+
+// Function to show the question and image
 function showQuestion() {
     if (questions.length > 0 && currentQuestionIndex < questions.length) {
         const questionObj = questions[currentQuestionIndex];
         popupBody.innerHTML = `<p>${questionObj.question}</p>`;
         answerInput.value = '';
+        popup.style.display = 'block'; // Show the popup
     } else {
         console.error('Invalid question index or questions not loaded');
     }
 }
+
+// Close the popup
+closeButton.addEventListener('click', function() {
+    popup.style.display = 'none';
+});
+
+// Close the popup when clicking anywhere outside of it
+window.addEventListener('click', function(event) {
+    if (event.target == popup) {
+        popup.style.display = 'none';
+    }
+});
+
+// Event listener for question buttons
+questionButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        if (!this.disabled) {
+            currentQuestionIndex = parseInt(this.getAttribute('data-index'));  // Convert string to integer
+            showQuestion();
+        }
+    });
+});
+
+// Check the answer
+submitAnswerButton.addEventListener('click', function() {
+    checkAnswer();
+});
 
 function checkAnswer() {
     const userAnswer = answerInput.value.trim();
@@ -87,7 +116,7 @@ function checkAnswer() {
         let message = "";
 
         if (nextQuestionNumber <= totalQuestions) {
-            message = `Congratulations! You completed question ${currentQuestionNumber} and unlocked question ${nextQuestionNumber}. You are one step closer to the grand prize!`;
+            message = `Congratulations! You completed step ${currentQuestionNumber} and unlocked step ${nextQuestionNumber}. You are one step closer to the grand prize!`;
         } else {
             message = "Congratulations! You've completed all questions. Stay tuned for the next levels!";
             createConfetti();
@@ -112,13 +141,13 @@ function checkAnswer() {
     } else {
         // Yanlış cevap
         const wrongMessage = document.getElementById('wrongMessage');
-        wrongMessage.textContent = 'Wrong answer! Try again.';
+        wrongMessage.textContent = 'Wrong answer, but don\'t be discouraged! Try your luck again';
         wrongPopup.style.display = 'block';
 
         // 2 saniye sonra popup'ı gizle
         setTimeout(() => {
             wrongPopup.style.display = 'none';
-        }, 2000);
+        }, 3000);
     }
 }
 

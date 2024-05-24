@@ -37,27 +37,35 @@
     <button class="question-button" data-index="9" disabled>Question 10</button>
 </div>
 
+
 <div id="popup" class="popup">
     <div class="popup-content">
         <span class="close">&times;</span>
+        <img id="popupImage" class="popup-image" src="images/question-popup.png" alt="Popup Background">
         <div id="popupBody"></div>
         <input type="text" id="answer" placeholder="Enter your answer here">
-        <button id="submitAnswer">Submit Answer</button>
+        <button id="submitAnswer" class="submit-button">
+            <img src="images/submit-button.png" alt="Submit">
+            <span class="submit-text">Submit Answer</span>
+        </button>
     </div>
 </div>
 
+
+
 <div id="congratsPopup" class="congrats-popup">
     <div class="congrats-popup-content">
-        <img id="congratsImage" src="images/happy.png" alt="Congratulations"> <!-- Değişiklik burada -->
+        <img id="congratsImage" src="images/win.png" alt="Congratulations"> <!-- Değişiklik burada -->
         <p id="congratsMessage"></p>
     </div>
 </div>
+
 
 <div id="confettiContainer"></div>
 
 <div id="wrongPopup" class="wrong-popup">
     <div class="wrong-popup-content">
-        <img class="sad-img" src="images/sad.png" alt="Sad face">
+        <img class="sad-img" src="images/lose.png" alt="Sad face">
         <p id="wrongMessage"></p>
     </div>
 </div>
