@@ -7,99 +7,97 @@
     <link rel="stylesheet" href="gamePage.css">
 </head>
 <body>
-<nav>
-    <ul>
-        <li><a href="sign-up.html">Sign Up</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="feedback.html">Product Feedback</a></li>
-        <li><a href="reservation.html">Reservation</a></li>
-        <li><a href="contact-us.html">Contact Us</a></li>
-        <li><a href="about-us.html">About Us</a></li>
-        <li><a href="index.html">Home Page</a></li>
-    </ul>
-</nav>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home Page</a></li>
+            <li><a href="about-us.html">About Us</a></li> <!-- Link to About Us page -->
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="reservation.html">Reservation</a></li> 
+            <li><a href="feedback.html">Product Feedback</a></li>
+            <li><a href="login.html">Login</a></li> <!-- Link to Login page -->
+            <li><a href="sign-up.html">Sign Up</a></li> <!-- Link to Sign Up page -->
+        </ul>
+    </nav>
+  
+    <div class="buttons">
+        <button class="question-button" data-index="0">Question 1</button>
+        <button class="question-button" data-index="1" disabled>Question 2</button>
+        <button class="question-button" data-index="2" disabled>Question 3</button>
+        <button class="question-button" data-index="3" disabled>Question 4</button>
+        <button class="question-button" data-index="4" disabled>Question 5</button>
+        <button class="question-button" data-index="5" disabled>Question 6</button>
+        <button class="question-button" data-index="6" disabled>Question 7</button>
+        <button class="question-button" data-index="7" disabled>Question 8</button>
+        <button class="question-button" data-index="8" disabled>Question 9</button>
+        <button class="question-button" data-index="9" disabled>Question 10</button>
+    </div>
 
-<div class="buttons">
-    <button class="question-button" data-index="0">Question 1</button>
-    <button class="question-button" data-index="1" disabled>Question 2</button>
-    <button class="question-button" data-index="2" disabled>Question 3</button>
-    <button class="question-button" data-index="3" disabled>Question 4</button>
-    <button class="question-button" data-index="4" disabled>Question 5</button>
-    <button class="question-button" data-index="5" disabled>Question 6</button>
-    <button class="question-button" data-index="6" disabled>Question 7</button>
-    <button class="question-button" data-index="7" disabled>Question 8</button>
-    <button class="question-button" data-index="8" disabled>Question 9</button>
-    <button class="question-button" data-index="9" disabled>Question 10</button>
-</div>
-
-<div id="popup" class="popup">
-    <div class="popup-content">
-        <span class="close">&times;</span>
-        <img id="popupImage" class="popup-image" src="images/question-popup.png" alt="Popup Background">
-        <div id="popupBody"></div>
-        <input type="text" id="answer" placeholder="Enter your answer here">
-        <button id="submitAnswer" class="submit-button">
-            <img src="images/submit-button.png" alt="Submit">
-            <span class="submit-text">Submit Answer</span>
+    <div class="quotesButton">
+        <button id="fetchQuotesButton" class="fetch-quotes-button">
+            <span>Get Motivational Quotes</span>
         </button>
     </div>
-</div>
 
-<div id="congratsPopup" class="congrats-popup">
-    <div class="congrats-popup-content">
-        <img id="congratsImage" src="images/win.png" alt="Congratulations">
-        <p id="congratsMessage"></p>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img id="popupImage" class="popup-image" src="images/question-popup.png" alt="Popup Background">
+            <div id="popupBody"></div>
+            <input type="text" id="answer" placeholder="Enter your answer here">
+            <button id="submitAnswer" class="submit-button">
+                <img src="images/submit-button.png" alt="Submit">
+                <span class="submit-text">Submit Answer</span>
+            </button>
+        </div>
     </div>
-</div>
 
-<div id="confettiContainer"></div>
-
-<div id="wrongPopup" class="wrong-popup">
-    <div class="wrong-popup-content">
-        <img class="sad-img" src="images/lose.png" alt="Sad face">
-        <p id="wrongMessage"></p>
+    <div id="congratsPopup" class="congrats-popup">
+        <div class="congrats-popup-content">
+            <img id="congratsImage" src="images/win.png" alt="Congratulations">
+            <p id="congratsMessage"></p>
+        </div>
     </div>
-</div>
+
+    <div id="confettiContainer"></div>
+
+    <div id="wrongPopup" class="wrong-popup">
+        <div class="wrong-popup-content">
+            <img class="sad-img" src="images/lose.png" alt="Sad face">
+            <p id="wrongMessage"></p>
+        </div>
+    </div>
 
 
-<button id="fetchQuotesButton" class="fetch-quotes-button">
-    <img src="images/motivation-button.png" alt="Get Motivational Quotes">
-    <span>Get Motivational Quotes</span>
-</button>
+    <div id="quotesPopup" class="quotes-popup"></div> <!-- Empty div for displaying quotes as popup -->
+    <div id="quotesSection" class="quotes-section"></div> <!-- Quotes section moved outside button -->
 
-<div id="quotesPopup" class="quotes-popup"></div> <!-- Empty div for displaying quotes as popup -->
-<div id="quotesSection" class="quotes-section"></div> <!-- Quotes section moved outside button -->
+    <div class="png1">
+        <img src="images/palm1.png">
+    </div>
+    <div class="png2">
+        <img src="images/palm2.png">
+    </div>
 
-<div class="png1">
-    <img src="images/palm1.png">
-</div>
-<div class="png2">
-    <img src="images/palm2.png">
-</div>
-<div class="png3">
-    <img src="images/mount3.png">
-</div>
-<div class="png4">
-    <img src="images/ship.png">
-</div>
-<div class="png5">
-    <img src="images/compass.png">
-</div>
-<div class="png6">
-    <img src="images/skull.png">
-</div>
-<div class="png7">
-    <img src="images/treasure.png">
-</div>
-<div class="png8">
-    <img src="images/mount4.png">
-</div>
+    <div class="png4">
+        <img src="images/ship.png">
+    </div>
+    <div class="png5">
+        <img src="images/compass.png">
+    </div>
+    <div class="png6">
+        <img src="images/skull.png">
+    </div>
+    <div class="png7">
+        <img src="images/treasure.png">
+    </div>
+    <div class="png8">
+        <img src="images/mount4.png">
+    </div>
 
-<footer>
-    &copy; 2024 Your Company. All rights reserved.
-</footer>
-
-<script src="gamePage.js"></script>
-
+    <script src="gamePage.js"></script>
+    <footer>
+        &copy; 2024 All rights reserved.
+    </footer>
 </body>
 </html>

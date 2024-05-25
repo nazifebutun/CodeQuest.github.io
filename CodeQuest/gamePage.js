@@ -182,12 +182,18 @@ function fetchQuotes() {
     fetch('https://type.fit/api/quotes')
         .then(response => response.json())
         .then(data => {
-            displayQuotesPopup(data);
+            // Filter out the 'type.fit' part from the author field
+            const filteredData = data.map(quote => {
+                const author = quote.author.replace(', type.fit', '');
+                return { ...quote, author };
+            });
+            displayQuotesPopup(filteredData);
         })
         .catch(error => {
             console.error('Error fetching quotes:', error);
         });
 }
+
 
 
 // Function to display motivational quotes as a popup
@@ -203,7 +209,7 @@ function displayQuotesPopup(quotes) {
     popup.style.display = 'block';
     setTimeout(() => {
         popup.style.display = 'none';
-    }, 2000);
+    }, 3000);
 }
 
 // Event listener for fetching quotes

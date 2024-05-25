@@ -1,12 +1,12 @@
 [
-    {"question": "How do you declare a variable in Java?", "answer": "i"},
-    {"question": "How do you declare an array in Java?", "answer": "i"},
-    {"question": "How do you write a loop in Java?", "answer": "i"},
-    {"question": "How do you write an if-else statement in Java?", "answer": "i"},
-    {"question": "How do you define a method in Java?", "answer": "i"},
-    {"question": "How do you define a class in Java?", "answer": "i"},
-    {"question": "How do you create an object in Java?", "answer": "i"},
-    {"question": "How do you find the length of an array in Java?", "answer": "i"},
-    {"question": "How do you compare strings in Java?", "answer": "i"},
-    {"question": "How do you write a comment in Java?", "answer": "i"}
+    {"question": "How do you declare a variable in Java?", "answer": "declaration"},
+    {"question": "How do you declare an array in Java?", "answer": "array"},
+    {"question": "How do you write a loop in Java?", "answer": "loop"},
+    {"question": "How do you write an if-else statement in Java?", "answer": "conditional"},
+    {"question": "How do you define a method in Java?", "answer": "method"},
+    {"question": "How do you define a class in Java?", "answer": "class"},
+    {"question": "How do you create an object in Java?", "answer": "object"},
+    {"question": "How do you find the length of an array in Java?", "answer": "length"},
+    {"question": "How do you compare strings in Java?", "answer": "comparison"},
+    {"question": "How do you write a comment in Java?", "answer": "comment"}
 ]
