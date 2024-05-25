@@ -80,6 +80,11 @@ function showQuestion() {
     }
 }
 
+window.onload = function() {
+    loadQuestions();
+};
+
+
 // Close the popup
 closeButton.addEventListener('click', function() {
     popup.style.display = 'none';
@@ -172,7 +177,34 @@ function createConfetti() {
     document.getElementById('congratsImage').src = 'images/cup.png';
 }
 
+function fetchQuotes() {
+    console.log('Fetching quotes...');
+    fetch('https://type.fit/api/quotes')
+        .then(response => response.json())
+        .then(data => {
+            displayQuotesPopup(data);
+        })
+        .catch(error => {
+            console.error('Error fetching quotes:', error);
+        });
+}
 
-window.onload = function() {
-    loadQuestions();
-};
+
+// Function to display motivational quotes as a popup
+function displayQuotesPopup(quotes) {
+    const popup = document.getElementById('quotesPopup');
+    popup.innerHTML = ''; // Clear any existing quotes
+        const quote = quotes[Math.floor(Math.random() * quotes.length)];
+        const quoteElement = document.createElement('div');
+        quoteElement.className = 'quote';
+        quoteElement.textContent = `"${quote.text}" - ${quote.author || 'Unknown'}`;
+        popup.appendChild(quoteElement);
+    // Show the popup
+    popup.style.display = 'block';
+    setTimeout(() => {
+        popup.style.display = 'none';
+    }, 2000);
+}
+
+// Event listener for fetching quotes
+document.getElementById('fetchQuotesButton').addEventListener('click', fetchQuotes);

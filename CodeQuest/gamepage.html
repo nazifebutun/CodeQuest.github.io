@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="gamePage.css">
-
 </head>
-
 <body>
 <nav>
     <ul>
@@ -21,9 +18,7 @@
         <li><a href="index.html">Home Page</a></li>
     </ul>
 </nav>
-<footer>
-    &copy; 2024 Your Company. All rights reserved.
-</footer>
+
 <div class="buttons">
     <button class="question-button" data-index="0">Question 1</button>
     <button class="question-button" data-index="1" disabled>Question 2</button>
@@ -36,7 +31,6 @@
     <button class="question-button" data-index="8" disabled>Question 9</button>
     <button class="question-button" data-index="9" disabled>Question 10</button>
 </div>
-
 
 <div id="popup" class="popup">
     <div class="popup-content">
@@ -51,15 +45,12 @@
     </div>
 </div>
 
-
-
 <div id="congratsPopup" class="congrats-popup">
     <div class="congrats-popup-content">
-        <img id="congratsImage" src="images/win.png" alt="Congratulations"> <!-- Değişiklik burada -->
+        <img id="congratsImage" src="images/win.png" alt="Congratulations">
         <p id="congratsMessage"></p>
     </div>
 </div>
-
 
 <div id="confettiContainer"></div>
 
@@ -71,6 +62,13 @@
 </div>
 
 
+<button id="fetchQuotesButton" class="fetch-quotes-button">
+    <img src="images/motivation-button.png" alt="Get Motivational Quotes">
+    <span>Get Motivational Quotes</span>
+</button>
+
+<div id="quotesPopup" class="quotes-popup"></div> <!-- Empty div for displaying quotes as popup -->
+<div id="quotesSection" class="quotes-section"></div> <!-- Quotes section moved outside button -->
 
 <div class="png1">
     <img src="images/palm1.png">
@@ -88,22 +86,20 @@
     <img src="images/compass.png">
 </div>
 <div class="png6">
-    <img src="images/goal.png">
-</div>
-<div class="png7">
     <img src="images/skull.png">
 </div>
-<div class="png8">
+<div class="png7">
     <img src="images/treasure.png">
 </div>
-
-<div class="png9">
+<div class="png8">
     <img src="images/mount4.png">
 </div>
 
+<footer>
+    &copy; 2024 Your Company. All rights reserved.
+</footer>
 
 <script src="gamePage.js"></script>
 
 </body>
-
 </html>

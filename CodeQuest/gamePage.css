@@ -147,23 +147,18 @@ div[class^="png"] {
 }
 
 .png6 {
-    top: 50px;
-    left: 1270px;
-    width: 100px; /* Size adjustments */
-}
-.png7 {
     top: 240px;
     left: 540px;
     width: 130px; /* Size adjustments */
 }
 
-.png8 {
+.png7 {
     top: 50px;
     left: 1200px;
     width: 300px; /* Size adjustments */
 }
 
-.png9 {
+.png8 {
     top: 40px;
     left: 750px;
     width: 450px; /* Size adjustments */
@@ -419,3 +414,54 @@ body {
     z-index: 1;
     text-shadow: 1px 1px 2px black;
 }
+
+.quotes-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.quote {
+    margin-bottom: 15px;
+    font-size: 1.8em;
+    color: lightgoldenrodyellow;
+    font-style: italic;
+}
+
+.fetch-quotes-button {
+    background-color: rgba(255, 140, 0, 0.4);
+    border: 2px solid rgba(255, 140, 0, 0.4);
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.fetch-quotes-button:hover {
+    background-color: rgba(255, 140, 0, 0.4);
+    color: lightgoldenrodyellow;
+    border-color: rgba(255, 140, 0, 0.4);
+}
+
+.fetch-quotes-button img {
+    margin-right: 10px;
+    width: 20px;
+    height: auto;
+}
+
+
+.quotes-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 140, 0, 0.48);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 80%;
+    text-align: center;
+}
+
