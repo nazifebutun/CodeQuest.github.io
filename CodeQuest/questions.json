@@ -1,12 +1,12 @@
 [
-    {"question": "How do you declare a variable in Java?", "answers": ["By specifying the data type and name.", "By using the 'int', 'String', 'double' keywords followed by the variable name."]},
-    {"question": "How do you declare an array in Java?", "answers": ["By creating a list of data of a specific data type.", "Using square brackets after the data type to specify an array."]},
-    {"question": "How do you write a loop in Java?", "answers": ["Using 'for', 'while', or 'do-while'."]},
-    {"question": "How do you write an if-else statement in Java?", "answers": ["With conditional statements."]},
-    {"question": "How do you define a method in Java?", "answers": ["By specifying the return type, name, and optionally parameters."]},
-    {"question": "How do you define a class in Java?", "answers": ["Using the 'class' keyword."]},
-    {"question": "How do you create an object in Java?", "answers": ["Using the 'new' keyword followed by the class name."]},
-    {"question": "How do you find the length of an array in Java?", "answers": ["With the 'length' property."]},
-    {"question": "How do you compare strings in Java?", "answers": ["Using the 'equals()' method."]},
-    {"question": "How do you write a comment in Java?", "answers": ["Using '//' for single-line or '/* */' for multi-line comments."]}
+    {"question": "How do you declare a variable in Java?", "answer": "int number;"},
+    {"question": "How do you declare an array in Java?", "answer": "int[] numbers;"},
+    {"question": "How do you write a loop in Java?", "answer": "for (int i = 0; i < 10; i++) {}"},
+    {"question": "How do you write an if-else statement in Java?", "answer": "if (condition) {} else {}"},
+    {"question": "How do you define a method in Java?", "answer": "void myMethod() {}"},
+    {"question": "How do you define a class in Java?", "answer": "class MyClass {}"},
+    {"question": "How do you create an object in Java?", "answer": "MyClass obj = new MyClass();"},
+    {"question": "How do you find the length of an array in Java?", "answer": "numbers.length;"},
+    {"question": "How do you compare strings in Java?", "answer": "string1.equals(string2);"},
+    {"question": "How do you write a comment in Java?", "answer": "// This is a comment"}
 ]
