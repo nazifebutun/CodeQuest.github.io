@@ -57,7 +57,7 @@ body{
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    background:url(images/map_backgroung.jpg) no-repeat;
+    background:url(images/map_backgroung.webp) no-repeat;
     background-size: cover;
     background-position: center;
 }
